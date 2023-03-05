@@ -1,3 +1,7 @@
+# Project Idea
+There is a game called S.T.A.L.K.E.R. Shadow of Chernobyl. Initially I wanted to crate a CNN that classifies images by level name. It turned out to be a bit hard. Thus I made a simpler CNN that classifies loading screens, which include information about level name.
+
+
 # How to run 
 Download Supplimental materials like testing datasets, the original dataset, weights from [Google Drive](https://drive.google.com/file/d/16PcN2LsWytY0eCCd4rarH5lQdy_LzVcr/view?usp=share_link). Unpack everything in root directory of this project.
 
