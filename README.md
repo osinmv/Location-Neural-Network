@@ -1,5 +1,5 @@
 # How to run 
-Download Supplimental materials like testing datasets, the original dataset, weights from [Google Drive](https://drive.google.com/file/d/16PcN2LsWytY0eCCd4rarH5lQdy_LzVcr/view?usp=sharing). Unpack everything in root directory of this project.
+Download Supplimental materials like testing datasets, the original dataset, weights from [Google Drive](https://drive.google.com/file/d/16PcN2LsWytY0eCCd4rarH5lQdy_LzVcr/view?usp=share_link). Unpack everything in root directory of this project.
 
 You need conda with `tensorflow` and `matplotlib`.
 
