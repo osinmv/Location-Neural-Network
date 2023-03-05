@@ -5,14 +5,11 @@ def get_num_of_images(path:str):
     return len(os.listdir(path=path))
 
 tf.config.set_soft_device_placement(True)
-classes = ['army', 'bar', 'cardon', 'chaes', 'garbage', 'pripyat', 'radar', 'sarcofag']
 images = tf.keras.utils.image_dataset_from_directory("./IndependentData",image_size=(224, 224),shuffle=False, batch_size=32)
-print(images.class_names)
-#images = images.map(lambda x, y: (tf.keras.applications.nasnet.preprocess_input(x), y))
-#model = keras.models.load_model("nasnet.h5")
-for i in range(19,59):
+classes = images.class_namess
+for i in range(0,8):
     #input("press enter to continue")
-    weights = "LexaNet/.lexanet"+str(i)+".h5"
+    weights = "Weights"+str(i)+".h5"
     model = tf.keras.models.load_model(weights)
     predictions = model.predict(images)
     #predictions =  model.predict(images)

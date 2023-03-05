@@ -38,24 +38,29 @@ def get_avg_pixel_by_area(image:Image.Image, radius:int, y_offset:int):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
                         prog = 'ERK',
-                        description = 'Splits images by loadscreens',)
-    parser.add_argument("folder")
-    parser.add_argument("basename")
+                        description = 'Splits sequence of images by loadscreens',)
+    parser.add_argument("folder", help="folder with images to split")
+    parser.add_argument("basename", help="basename of images in folder")
+    parser.add_argument("index", help="index of image with loadscreen")
     args = parser.parse_args()
     images = os.listdir(args.folder)
     num_of_images = len(images)
     loading = False
     previous_index = 1
+    image_intervals = []
+    ar,ag,ab = get_avg_pixel_by_area(Image.open(args.folder+"/"+args.basename+args.index+".png"),20,50)
     for index in range(1,num_of_images+1):
         image = args.folder+"/"+args.basename+str(index)+".png"
         im = Image.open(image)
         r,g,b = get_avg_pixel_by_area(im, 20, 50)
 
-        # found emperically
-        if math.isclose(r,50.5825, abs_tol=2.0) and\
-           math.isclose(g,43.8625, abs_tol=2.0) and\
-           math.isclose(b,33.2025, abs_tol=2.0):
+        # found from indexed image with loading screen
+        if math.isclose(r,ar, abs_tol=2.0) and\
+           math.isclose(g,ag, abs_tol=2.0) and\
+           math.isclose(b,ab, abs_tol=2.0):
             if not(loading):
+                print(previous_index,index)
+                #image_intervals.append((previous_index, index))
                 move_images_by_range(previous_index,index, args.folder, args.basename)
             loading = True
         else:
@@ -63,3 +68,7 @@ if __name__ == "__main__":
                 previous_index = index
             loading = False
     move_images_by_range(previous_index,index, args.folder, args.basename)
+    #for i in range(1,len(image_intervals)):
+    #    end = image_intervals[i][0]
+    #    start = image_intervals[i-1][1]
+    #    move_images_by_range(start,end, args.folder, args.basename)
