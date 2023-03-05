@@ -1,5 +1,7 @@
 # How to run 
-You need conad with `tensorflow` and `matplotlib`.
+Download Supplimental materials like testing datasets, the original dataset, weights from [Google Drive](https://drive.google.com/file/d/16PcN2LsWytY0eCCd4rarH5lQdy_LzVcr/view?usp=sharing). Unpack everything in root directory of this project.
+
+You need conda with `tensorflow` and `matplotlib`.
 
 If something doesn't work, there is `requirements.txt`
 
