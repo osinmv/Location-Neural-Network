@@ -31,6 +31,6 @@ There is tiny `LoadingScreensDataset` folder you can train your neural networks 
 
 There is also `TestingDataset` folder  which can be used for testing CNN on real data.
 
-There is `Weights` folder containing 3 weights files used in `classify_and_sort.py`.
+There is `Weights` folder containing 3 weights files used in `classify_and_sort.py`. Models in the folder have ~80% accuracy. 
 
 There is empty `TestDataResults` folder, it will contain classified images after you run `classift_and_sort.py`
