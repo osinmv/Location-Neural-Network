@@ -1,5 +1,5 @@
 # Project Idea
-There is a game called S.T.A.L.K.E.R. Shadow of Chernobyl. Initially I wanted to crate a CNN that classifies images by level name. It turned out to be a bit hard. Thus I made a simpler CNN that classifies loading screens, which include information about level name. This CNN now can be used to generate unlimited amount of data for the first neural network. Maybe at some point I will try to work on my original idea
+There is a game called S.T.A.L.K.E.R. Shadow of Chernobyl. Initially I wanted to crate a CNN that classifies images by level. It turned out to be a bit hard. Thus I made a simpler CNN that classifies loading screens, which include information about level name. This CNN now can be used to generate unlimited amount of data for the first neural network. Maybe at some point I will try to work on my original idea
 
 
 # How to run 
